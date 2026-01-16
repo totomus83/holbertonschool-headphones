@@ -241,6 +241,11 @@ footer {
   display: none;
 }
 
+.menu-icon {
+  display: none;
+}
+
+
 .header-menu-content a {
   text-decoration: none;
   outline: none;
@@ -383,7 +388,7 @@ footer {
     font-size: 17px;
   }
 
-   .menu-icon {
+  .menu-icon {
     display: block;
     cursor: pointer;
     position: fixed;
@@ -391,6 +396,10 @@ footer {
     left: 20px;
     z-index: 1001;
     padding: 10px;
+  }
+
+  .menu-icon-img {
+    display: block;
   }
 
 
