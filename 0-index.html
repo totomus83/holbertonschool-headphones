@@ -10,31 +10,32 @@
     <link rel='stylesheet' href='0-styles.css'>
   </head>
   <body>
-    <header>
-      <a href="#">
-        <img src="images/logo-headphones.png" alt="">
-      </a>
-
-      <ul>
-        <li>what we do</li>
-        <li>our results</li>
-        <li>contact us</li>
-      </ul>
-    </header>
+    
     <main>
+
       <section class="first-section">
-        <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
+        <header class="header">
+          <a class ="header-logo" href="#"><img src="images/logo-headphones.png" alt=""></a>
+          <ul class ="header-menu">
+            <li class="header-menu-content">what we do</li>
+            <li class="header-menu-content">our results</li>
+            <li class="header-menu-content">contact us</li>
+          </ul>
+      </header>
+        <div class="top-section">
+          <h1 >Lorem ipsum dolor set amet lorem ipsum</h1>
           <p>Lorem ipsum dolor set amet lorem ipsum dolor set</p>
-          <button>CALL TO ACTION</button>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <button class="top-section-button">CALL TO ACTION</button>
+        </div>
+          <p class="bottom-section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
       </section>
 
-      <section>
+      <section class="section-us">
         <h2>What we do…</h2>*
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          <ul>
+          <p class="section-us-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <ul class="section-us-list">
               <li>
-                <img src="images/sound-frequency.png" alt="">
+                <img src="images/sound-frecuency.png" alt="">
                   <h3>Lorem ipsum</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </li>
@@ -57,9 +58,9 @@
       </section>
 
       <section class="results-section">
-        <h2>Our results speak for themselves</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <ul>
+        <h2 class="results-section-title">Our results speak for themselves</h2>
+        <p class="results-section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <ul class="results-section-list">
           <li><img src="images/dot_1.png" alt=""></li>
           <li><img src="images/dot_1.png" alt=""></li>
           <li><img src="images/dot_1.png" alt=""></li>
@@ -67,25 +68,30 @@
         </ul>
       </section>
 
-      <section>
+      <section class="contact-us-section">
         <h2>Contact us</h2>
-        <p>Name</p>
-        <p>Email</p>
-        <p>Your message</p>
-        <button>CALL TO ACTION</button>
+          <div class="contact-us-container">
+            <input class="contact-us-section-input" type="text" name="name" value="" placeholder="Name">
+          </div>
+          <div class="contact-us-container">
+            <input class="contact-us-section-input" type="text" name="name" value="" placeholder="Email">
+          </div>
+          <div class="contact-us-container">
+            <input class="contact-us-section-input" type="text" name="name" value="" placeholder="Your message">
+          </div>
+        <button class="top-section-button">CALL TO ACTION</button>
       </section>
     </main>
-    <footer>
+    <footer class="footer-section">
       <a href="#">
         <img src="images/logo-headphones.png" alt="Headphones logo">
       </a>
       <p>©headphones 2020</p>
-      <ul>
-          <li><img src="images/Facebook_White.png" alt=""></li>
-          <li><img src="images/twitter.png" alt=""></li>
-          <li><img src="images/instagram.png" alt=""></li>
+      <ul class="list-socials">
+        <li><img src="images/Facebook_White.png" alt=""></li>
+        <li><img src="images/twitter.png" alt=""></li>
+        <li><img src="images/instagram.png" alt=""></li>
         </ul>
     </footer>
   </body>
-</body>
 </html>
