@@ -242,17 +242,17 @@ footer {
 }
 
 .header-menu-content a {
-  text-decoration: none; /* enlève le soulignement si nécessaire */
-  outline: none;         /* enlève le contour bleu au focus */
+  text-decoration: none;
+  outline: none;
   color: var(--white-color);
 }
 
 .header-menu-content a:focus {
-  outline: none;         /* enlève le contour au focus */
+  outline: none;
 }
 
 .header-menu-content a:hover {
-  color: #FF6565;           /* couleur rose au hover */
+  color: #FF6565;
 }
 
 
@@ -386,21 +386,13 @@ footer {
    .menu-icon {
     display: block;
     cursor: pointer;
-    position: fixed;  /* fixe à l'écran */
-    top: 20px;        /* distance depuis le haut */
-    left: 20px;       /* distance depuis la gauche */
-    z-index: 1001;    /* au-dessus du contenu */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
     padding: 10px;
   }
 
-
-  .menu-icon .navicon {
-    background: white;
-    display: block;
-    width: 25px;
-    height: 3px;
-    position: relative;
-  }
 
   .menu-icon .navicon::before,
   .menu-icon .navicon::after {
@@ -414,12 +406,11 @@ footer {
   .menu-icon .navicon::before { top: -8px; }
   .menu-icon .navicon::after { top: 8px; }
 
-  /* Masquer menu par défaut sur mobile */
   .header-menu {
     display: none !important;       
     flex-direction: column;
     position: absolute;                
-    top: 80px;        /* <-- ici tu décales le menu vers le bas */                                      
+    top: 80px;                                      
     background-color: rgba(255, 255, 255, 0); 
     gap: 15px;
     text-align: center;
@@ -428,7 +419,7 @@ footer {
 
 
   .menu-btn:checked ~ .header-menu {
-    display: flex !important;       /* s'affiche quand le hamburger est coché */
+    display: flex !important;
   }
 
   .header-menu.active {
@@ -505,6 +496,17 @@ footer {
     text-align: center;
   }
 
+  .section-us-text {
+    max-width: 350px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+
+  .section-us-images {
+    width: 75px;
+    height: 75px;
+  }
+
   .results-section-title {
     max-width: 300px;
     margin: 0 auto 50px;
@@ -535,7 +537,7 @@ footer {
     text-align: center;
   }
 
-    .footer-section {
+  .footer-section {
     display: flex;
     flex-direction: column;
     align-items: center;
