@@ -1,3 +1,6 @@
+/* variables
+      ============================= */
+
 :root {
   --white-color: #ffffff;
   --line-space: 1.6;
@@ -5,6 +8,8 @@
   --title-fsize: 32px;
 }
 
+/* Desktop styling
+      ============================= */
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -221,12 +226,40 @@ footer {
 }
 
 .footer-section p {
-    margin-top: 200px;
-  }
+  margin-top: 200px;
+}
+
+.header-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 50px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.header-menu-content a {
+  text-decoration: none; /* enlève le soulignement si nécessaire */
+  outline: none;         /* enlève le contour bleu au focus */
+  color: var(--white-color);
+}
+
+.header-menu-content a:focus {
+  outline: none;         /* enlève le contour au focus */
+}
+
+.header-menu-content a:hover {
+  color: #FF6565;           /* couleur rose au hover */
+}
+
 
 /* ================== */
 /* Tablet (max-width: 767px) */
 /* ================== */
+
 @media (max-width: 767px) {
 
   body {
@@ -328,12 +361,12 @@ footer {
     gap: 12px;
   }
 
-
 }
 
 /* ================== */
 /* Mobile (max-width: 480px) */
 /* ================== */
+
 @media (max-width: 480px) {
 
   body {
@@ -343,11 +376,61 @@ footer {
   }
 
   html, body {
-  overflow-x: hidden;
+    overflow-x: hidden;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+   .menu-icon {
+    display: block;
+    cursor: pointer;
+    position: fixed;  /* fixe à l'écran */
+    top: 20px;        /* distance depuis le haut */
+    left: 20px;       /* distance depuis la gauche */
+    z-index: 1001;    /* au-dessus du contenu */
+    padding: 10px;
   }
 
 
-  /* afficher le menu quand actif */
+  .menu-icon .navicon {
+    background: white;
+    display: block;
+    width: 25px;
+    height: 3px;
+    position: relative;
+  }
+
+  .menu-icon .navicon::before,
+  .menu-icon .navicon::after {
+    content: '';
+    background: white;
+    display: block;
+    width: 25px;
+    height: 3px;
+    position: absolute;
+  }
+  .menu-icon .navicon::before { top: -8px; }
+  .menu-icon .navicon::after { top: 8px; }
+
+  /* Masquer menu par défaut sur mobile */
+  .header-menu {
+    display: none !important;       
+    flex-direction: column;
+    position: absolute;                
+    top: 80px;        /* <-- ici tu décales le menu vers le bas */                                      
+    background-color: rgba(255, 255, 255, 0); 
+    gap: 15px;
+    text-align: center;
+    z-index: 1000;                  
+  }
+
+
+  .menu-btn:checked ~ .header-menu {
+    display: flex !important;       /* s'affiche quand le hamburger est coché */
+  }
+
   .header-menu.active {
     display: flex;
   }
@@ -364,16 +447,16 @@ footer {
   }
 
   .first-section {
-    padding: 20px 20px 50px 20px;
+    padding: 20px 20px 100px 20px;
     box-sizing: border-box;
-    height:100vh;
+    height: auto;
     background-image: url(images/background-480.png);
   }
 
   .top-section {
     text-align: center;
     padding: 0;
-    margin-top: 100px;
+    margin-top: 300px;
   }
 
   .top-section h1 {
@@ -384,7 +467,7 @@ footer {
     font-size: 18px;
     margin-right: 23px;
     margin-left: 23px;
-
+    margin-bottom: 25px;
   }
 
   .top-section .top-section-button {
@@ -400,5 +483,83 @@ footer {
     margin: 30px auto 0;
     max-width: 100%;
     text-align: center;
+  }
+  .bottom-section-text p {
+    margin-bottom: 50px;
+  }
+
+  .section-us-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .section-us-list li {
+    max-width: 300px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .results-section-title {
+    max-width: 300px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+
+  .results-section-text {
+    max-width: 400px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+
+  .results-section-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: -40px;
+  }
+
+  .results-section-list li {
+    max-width: 300px;
+    margin: 0;
+    text-align: center;
+  }
+
+    .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer-section p {
+    margin: 0;
+  }
+
+  .footer-section .list-socials {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .footer-section p {
+    margin-bottom: -100px;
+  }
+
+  .footer-section li {
+    margin-top: -100px;
   }
 }
